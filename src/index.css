@@ -23,3 +23,13 @@ body {
   backdrop-filter: blur(12px);
   border: var(--glass-border);
 }
+
+.neo-card {
+  @apply bg-[#0D2746] shadow-[8px_8px_16px_#05111e,-8px_-8px_16px_#153d6e] border border-white/5 rounded-[24px];
+}
+.neo-input {
+  @apply bg-[#071A2F] shadow-[inset_4px_4px_8px_#05111e,inset_-2px_-2px_5px_rgba(255,255,255,0.05)] border border-white/10 rounded-[16px];
+}
+.neo-button {
+  @apply bg-gold text-primary-navy font-bold shadow-[4px_4px_8px_#05111e,-2px_-2px_5px_rgba(255,255,255,0.1)] rounded-[16px] transition-all hover:shadow-[inset_4px_4px_8px_rgba(0,0,0,0.3)];
+}

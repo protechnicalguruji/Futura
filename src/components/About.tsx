@@ -15,7 +15,7 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
           <div className="relative group">
             <img src="/images/about_office_interior.jpg" alt="Office Interior" className="h-[500px] w-full object-cover rounded-3xl shadow-premium" />
-            <div className="absolute -bottom-6 -right-6 glass p-6 rounded-2xl hidden md:block">
+            <div className="absolute -bottom-6 -right-6 neo-card p-6 hidden md:block">
               <div className="text-3xl font-bold text-gold">10+</div>
               <div className="text-sm">Years Experience</div>
             </div>
@@ -25,7 +25,7 @@ export default function About() {
             <p className="text-gray-light text-lg font-light leading-relaxed mb-8">Futura Groups stands at the intersection of architectural excellence and trust. We curate premium spaces designed to elevate lifestyle and ensure sustainable long-term value.</p>
             <div className="grid grid-cols-2 gap-4">
               {features.map((f, i) => (
-                <div key={i} className="glass p-6 rounded-2xl flex flex-col items-center text-center">
+                <div key={i} className="neo-card p-6 flex flex-col items-center text-center">
                   <f.icon className="w-8 h-8 text-gold mb-3" />
                   <h3 className="text-sm font-medium">{f.title}</h3>
                 </div>

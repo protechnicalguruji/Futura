@@ -43,22 +43,22 @@ I would like to know more about your projects.`)}`;
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.8, delay: 0.2 }}
             onSubmit={handleSubmit}
-            className="glass p-8 rounded-3xl w-full max-w-lg lg:ml-auto"
+            className="neo-card p-8 w-full max-w-lg lg:ml-auto"
         >
           <h3 className="font-serif text-2xl mb-6">Inquire Now</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-            <input required type="text" placeholder="Full Name" className="bg-transparent border border-white/20 p-4 rounded-xl text-sm focus:border-gold outline-none w-full" onChange={(e) => setFormData({...formData, name: e.target.value})} />
-            <input required type="text" placeholder="Phone Number" className="bg-transparent border border-white/20 p-4 rounded-xl text-sm focus:border-gold outline-none w-full" onChange={(e) => setFormData({...formData, phone: e.target.value})} />
+            <input required type="text" placeholder="Full Name" className="neo-input p-4 w-full focus:border-gold outline-none" onChange={(e) => setFormData({...formData, name: e.target.value})} />
+            <input required type="text" placeholder="Phone Number" className="neo-input p-4 w-full focus:border-gold outline-none" onChange={(e) => setFormData({...formData, phone: e.target.value})} />
           </div>
-          <input required type="email" placeholder="Email Address" className="w-full bg-transparent border border-white/20 p-4 rounded-xl text-sm mb-4 focus:border-gold outline-none" onChange={(e) => setFormData({...formData, email: e.target.value})} />
-          <input type="text" placeholder="Investment Budget" className="w-full bg-transparent border border-white/20 p-4 rounded-xl text-sm mb-4 focus:border-gold outline-none" onChange={(e) => setFormData({...formData, budget: e.target.value})} />
-          <select className="w-full bg-secondary-navy border border-white/20 p-4 rounded-xl text-sm mb-4 focus:border-gold outline-none" onChange={(e) => setFormData({...formData, interestedIn: e.target.value})}>
+          <input required type="email" placeholder="Email Address" className="neo-input w-full p-4 mb-4 focus:border-gold outline-none" onChange={(e) => setFormData({...formData, email: e.target.value})} />
+          <input type="text" placeholder="Investment Budget" className="neo-input w-full p-4 mb-4 focus:border-gold outline-none" onChange={(e) => setFormData({...formData, budget: e.target.value})} />
+          <select className="neo-input w-full p-4 mb-4 focus:border-gold outline-none" onChange={(e) => setFormData({...formData, interestedIn: e.target.value})}>
             <option>Residential</option>
             <option>Commercial</option>
             <option>Investment</option>
           </select>
-          <textarea placeholder="Message" className="w-full bg-transparent border border-white/20 p-4 rounded-xl text-sm mb-6 focus:border-gold outline-none h-24" onChange={(e) => setFormData({...formData, message: e.target.value})} />
-          <button className="w-full bg-gradient-to-r from-gold/90 to-gold text-primary-navy font-bold py-4 rounded-xl hover:shadow-lg hover:shadow-gold/20 transition-all">Send Inquiry</button>
+          <textarea placeholder="Message" className="neo-input w-full p-4 mb-6 focus:border-gold outline-none h-24" onChange={(e) => setFormData({...formData, message: e.target.value})} />
+          <button className="neo-button w-full py-4">Send Inquiry</button>
         </motion.form>
       </div>
     </section>

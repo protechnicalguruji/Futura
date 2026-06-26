@@ -16,7 +16,7 @@ export default function Projects() {
             <motion.div 
               key={i} 
               whileHover={{ y: -10 }} 
-              className="group relative bg-secondary-navy rounded-3xl overflow-hidden shadow-premium border border-white/5 hover:border-gold/50 transition-all"
+              className="group relative neo-card overflow-hidden transition-all"
             >
               <div className="relative h-80 overflow-hidden">
                 <img src={p.image} alt={p.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
@@ -27,7 +27,7 @@ export default function Projects() {
                 <h3 className="text-2xl font-bold mb-2">{p.name}</h3>
                 <p className="text-gold text-sm mb-4">{p.location}</p>
                 <p className="text-gray-light font-light text-sm mb-8 leading-relaxed">{p.description}</p>
-                <button className="w-full bg-transparent border border-gold text-gold py-3 rounded-xl hover:bg-gold hover:text-primary-navy transition-all font-medium">View Project</button>
+                <button className="neo-button w-full py-3">View Project</button>
               </div>
             </motion.div>
           ))}
