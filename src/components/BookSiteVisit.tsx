@@ -3,7 +3,24 @@ import { motion } from 'motion/react';
 import { properties } from '../data/properties';
 
 export default function BookSiteVisit() {
-  const [formData, setFormData] = useState({ name: '', phone: '', date: '', time: '', property: properties[0].name, notes: '' });
+  const [formData, setFormData] = useState({ 
+    name: '', 
+    phone: '', 
+    date: '', 
+    time: '10:00 AM', 
+    property: properties[0].name, 
+    notes: '' 
+  });
+
+  const propertyOptions = [
+    'Luxury Villas', 'Residential Apartments', 'Commercial Spaces', 
+    'Investment Plots', 'Farm Houses', 'New Launch Projects'
+  ];
+  
+  const timeOptions = [
+    '10:00 AM', '11:00 AM', '12:00 PM', '01:00 PM', 
+    '02:00 PM', '03:00 PM', '04:00 PM', '05:00 PM'
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,13 +38,15 @@ export default function BookSiteVisit() {
                 <input required type="text" placeholder="Full Name" className="neo-input p-4 w-full" onChange={(e) => setFormData({...formData, name: e.target.value})} />
                 <input required type="text" placeholder="Phone Number" className="neo-input p-4 w-full" onChange={(e) => setFormData({...formData, phone: e.target.value})} />
             </div>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-3 gap-4">
                 <input required type="date" className="neo-input p-4 w-full" onChange={(e) => setFormData({...formData, date: e.target.value})} />
-                <input required type="time" className="neo-input p-4 w-full" onChange={(e) => setFormData({...formData, time: e.target.value})} />
+                <select className="neo-input w-full p-4" onChange={(e) => setFormData({...formData, time: e.target.value})}>
+                    {timeOptions.map(t => <option key={t}>{t}</option>)}
+                </select>
+                <select className="neo-input w-full p-4" onChange={(e) => setFormData({...formData, property: e.target.value})}>
+                    {propertyOptions.map(p => <option key={p}>{p}</option>)}
+                </select>
             </div>
-            <select className="neo-input w-full p-4" onChange={(e) => setFormData({...formData, property: e.target.value})}>
-                {properties.map(p => <option key={p.name}>{p.name}</option>)}
-            </select>
             <textarea placeholder="Additional Notes" className="neo-input w-full p-4 h-24" onChange={(e) => setFormData({...formData, notes: e.target.value})} />
             <button className="neo-button w-full py-4 text-lg">Book Site Visit</button>
           </form>
