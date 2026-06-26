@@ -12,20 +12,26 @@ export default function About() {
   return (
     <section id="about" className="py-24 bg-secondary-navy">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center mb-16">
-          <img src="/images/about_office_interior.jpg" alt="Office Interior" className="h-[400px] w-full object-cover rounded-2xl" />
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
+          <div className="relative group">
+            <img src="/images/about_office_interior.jpg" alt="Office Interior" className="h-[500px] w-full object-cover rounded-3xl shadow-premium" />
+            <div className="absolute -bottom-6 -right-6 glass p-6 rounded-2xl hidden md:block">
+              <div className="text-3xl font-bold text-gold">10+</div>
+              <div className="text-sm">Years Experience</div>
+            </div>
+          </div>
           <div>
             <h2 className="font-serif text-4xl mb-6">Redefining Luxury Real Estate</h2>
-            <p className="text-gray-light text-lg font-light leading-relaxed">Futura Groups stands at the intersection of architectural excellence and trust. We curate premium spaces designed to elevate lifestyle and ensure sustainable long-term value.</p>
+            <p className="text-gray-light text-lg font-light leading-relaxed mb-8">Futura Groups stands at the intersection of architectural excellence and trust. We curate premium spaces designed to elevate lifestyle and ensure sustainable long-term value.</p>
+            <div className="grid grid-cols-2 gap-4">
+              {features.map((f, i) => (
+                <div key={i} className="glass p-6 rounded-2xl flex flex-col items-center text-center">
+                  <f.icon className="w-8 h-8 text-gold mb-3" />
+                  <h3 className="text-sm font-medium">{f.title}</h3>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((f, i) => (
-            <motion.div key={i} whileHover={{ y: -5 }} className="p-8 border border-white/10 rounded-xl hover:border-gold transition-colors">
-              <f.icon className="w-8 h-8 text-gold mb-6" />
-              <h3 className="text-xl font-medium">{f.title}</h3>
-            </motion.div>
-          ))}
         </div>
       </div>
     </section>
