@@ -1,0 +1,6 @@
+{
+  "name": "Futura Groups",
+  "description": "A premium, minimalist portfolio website for Futura Groups, focusing on elegance and lead generation for high-end real estate.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
