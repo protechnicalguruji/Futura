@@ -13,7 +13,7 @@ export default function About() {
     <section id="about" className="py-24 bg-secondary-navy">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center mb-16">
-          <div className="h-[400px] bg-white/10 rounded-2xl" />
+          <img src="/src/assets/images/about_office_interior_1782464912850.jpg" alt="Office Interior" className="h-[400px] w-full object-cover rounded-2xl" />
           <div>
             <h2 className="font-serif text-4xl mb-6">Redefining Luxury Real Estate</h2>
             <p className="text-gray-light text-lg font-light leading-relaxed">Futura Groups stands at the intersection of architectural excellence and trust. We curate premium spaces designed to elevate lifestyle and ensure sustainable long-term value.</p>
