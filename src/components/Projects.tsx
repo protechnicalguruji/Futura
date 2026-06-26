@@ -11,7 +11,7 @@ export default function Projects() {
     <section id="projects" className="py-24">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="font-serif text-4xl mb-12 text-center">Featured Projects</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {projects.map((p, i) => (
             <motion.div key={i} whileHover={{ y: -10 }} className="bg-secondary-navy rounded-2xl overflow-hidden border border-white/10 hover:border-gold transition-all">
               <img src={p.image} alt={p.name} className="h-64 w-full object-cover" />
