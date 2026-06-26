@@ -1,9 +1,9 @@
 import { motion } from 'motion/react';
 
 const projects = [
-  { name: 'Skyline Tower', location: 'Dubai', category: 'Residential', description: 'Luxury apartments with skyline views.', image: '/src/assets/images/project_villa_1782464928136.jpg' },
-  { name: 'Future Corporate Hub', location: 'Singapore', category: 'Commercial', description: 'Next-gen workspace ecosystem.', image: '/src/assets/images/project_apartment_1782464940229.jpg' },
-  { name: 'Emerald Gardens', location: 'London', category: 'Residential', description: 'Sustainable premium living.', image: '/src/assets/images/project_commercial_1782464955222.jpg' },
+  { name: 'Skyline Tower', location: 'Dubai', category: 'Residential', description: 'Luxury apartments with skyline views.', image: '/images/project_villa.jpg' },
+  { name: 'Future Corporate Hub', location: 'Singapore', category: 'Commercial', description: 'Next-gen workspace ecosystem.', image: '/images/project_apartment.jpg' },
+  { name: 'Emerald Gardens', location: 'London', category: 'Residential', description: 'Sustainable premium living.', image: '/images/project_commercial.jpg' },
 ];
 
 export default function Projects() {

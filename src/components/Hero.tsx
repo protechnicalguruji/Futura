@@ -29,7 +29,7 @@ I would like to know more about your projects.`)}`;
 
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20">
-      <img src="/src/assets/images/hero_luxury_villa_1782464895597.jpg" className="absolute inset-0 w-full h-full object-cover" alt="Luxury Villa" />
+      <img src="/images/hero_luxury_villa.jpg" className="absolute inset-0 w-full h-full object-cover" alt="Luxury Villa" />
       <div className="absolute inset-0 bg-gradient-to-br from-primary-navy via-secondary-navy/80 to-primary-navy" />
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
