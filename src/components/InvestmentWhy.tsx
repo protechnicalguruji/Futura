@@ -12,16 +12,16 @@ const whyInvest = [
 
 export function WhyInvestSection() {
     return (
-        <section className="py-[140px] bg-bg-body">
+        <section className="py-[60px] md:py-[90px] lg:py-[140px] bg-bg-body">
             <div className="max-w-[1440px] mx-auto px-6">
-                <span className="text-accent font-medium tracking-widest uppercase text-[15px] mb-6 block">Smart Investment</span>
-                <h2 className="font-serif text-[60px] leading-[1.1] mb-20 tracking-tighter">Invest Today.<br/>Grow Tomorrow.</h2>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <span className="text-accent font-medium tracking-widest uppercase text-[13px] md:text-[15px] mb-6 block">Smart Investment</span>
+                <h2 className="font-serif text-[36px] md:text-[60px] leading-[1.1] mb-12 md:mb-20 tracking-tighter">Invest Today.<br/>Grow Tomorrow.</h2>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {whyInvest.map((item, i) => (
-                        <motion.div key={i} whileHover={{ y: -10 }} className="bg-white p-10 rounded-[28px] border border-border hover:border-accent transition-all">
-                            <item.icon className="w-12 h-12 text-accent mb-6" />
-                            <h3 className="text-[24px] font-medium mb-4">{item.title}</h3>
-                            <p className="text-text-secondary">{item.desc}</p>
+                        <motion.div key={i} whileHover={{ y: -5 }} className="bg-white p-8 md:p-10 rounded-[20px] md:rounded-[28px] border border-border hover:border-accent transition-all">
+                            <item.icon className="w-10 h-10 md:w-12 md:h-12 text-accent mb-6" />
+                            <h3 className="text-[20px] md:text-[24px] font-medium mb-4">{item.title}</h3>
+                            <p className="text-[14px] md:text-[16px] text-text-secondary">{item.desc}</p>
                         </motion.div>
                     ))}
                 </div>

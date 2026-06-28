@@ -32,7 +32,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-serif text-[72px] md:text-[88px] leading-[1] mb-8 tracking-tighter"
+            className="font-serif text-[50px] sm:text-[72px] md:text-[88px] leading-[1] mb-8 tracking-tighter"
           >
             Building Tomorrow's Landmarks Today.
           </motion.h1>
@@ -40,7 +40,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-[18px] text-gray-200 font-light mb-10 max-w-lg"
+            className="text-[16px] sm:text-[18px] text-gray-200 font-light mb-10 max-w-lg"
           >
             Premium residential and commercial developments crafted for investors, businesses, and families seeking exceptional long-term value.
           </motion.p>
@@ -48,13 +48,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex gap-4"
+            className="flex flex-col sm:flex-row gap-4"
           >
             <MagneticButton>
-                <button className="bg-accent text-white px-10 py-4 rounded-full text-[15px] hover:bg-red-700 transition-all">Explore Projects</button>
+                <button className="w-full sm:w-auto bg-accent text-white px-8 py-4 rounded-full text-[15px] hover:bg-red-700 transition-all">Explore Projects</button>
             </MagneticButton>
             <MagneticButton>
-                <button className="bg-white/10 backdrop-blur-sm text-white px-10 py-4 rounded-full text-[15px] hover:bg-white/20 transition-all">Book Site Visit</button>
+                <button className="w-full sm:w-auto bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full text-[15px] hover:bg-white/20 transition-all">Book Site Visit</button>
             </MagneticButton>
           </motion.div>
         </div>

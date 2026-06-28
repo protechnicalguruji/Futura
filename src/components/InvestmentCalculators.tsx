@@ -25,26 +25,26 @@ export function ROICalculator() {
     const growth = (profit / roi.amount) * 100;
 
     return (
-        <section className="py-[140px] bg-bg-body">
-            <div className="max-w-[1440px] mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
-                <div className="bg-white p-10 rounded-[28px] border border-border shadow-lg">
-                    <h3 className="font-serif text-[40px] mb-8 tracking-tighter">ROI Calculator</h3>
-                    <div className="space-y-8 mb-10">
+        <section className="py-[60px] md:py-[90px] lg:py-[140px] bg-bg-body">
+            <div className="max-w-[1440px] mx-auto px-6 grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
+                <div className="bg-white p-6 md:p-10 rounded-[20px] md:rounded-[28px] border border-border shadow-lg">
+                    <h3 className="font-serif text-[30px] md:text-[40px] mb-8 tracking-tighter">ROI Calculator</h3>
+                    <div className="space-y-6 md:space-y-8 mb-8 md:mb-10">
                         <Slider label="Investment Amount" min={100000} max={100000000} step={100000} value={roi.amount} onChange={(v: number) => setRoi({...roi, amount: v})} prefix="₹" />
                         <Slider label="Appreciation %" min={1} max={30} step={1} value={roi.appreciation} onChange={(v: number) => setRoi({...roi, appreciation: v})} />
                         <Slider label="Duration (Years)" min={1} max={30} step={1} value={roi.years} onChange={(v: number) => setRoi({...roi, years: v})} />
                     </div>
                 </div>
-                <div className='grid grid-cols-2 gap-6'>
+                <div className='grid grid-cols-2 gap-4 md:gap-6'>
                     {[
                         { label: 'Future Value', value: formatCurrency(futureValue) },
                         { label: 'Profit', value: formatCurrency(profit) },
                         { label: 'Annual Growth', value: `${roi.appreciation}%` },
                         { label: 'Total Appreciation', value: `${Math.round(growth)}%` },
                     ].map((stat, i) => (
-                        <div key={i} className='bg-bg-dark text-white p-8 rounded-[28px]'>
-                            <div className='text-[15px] text-gray-400 mb-2'>{stat.label}</div>
-                            <div className='text-[28px] font-bold text-accent'>{stat.value}</div>
+                        <div key={i} className='bg-bg-dark text-white p-6 md:p-8 rounded-[20px] md:rounded-[28px]'>
+                            <div className='text-[13px] md:text-[15px] text-gray-400 mb-2'>{stat.label}</div>
+                            <div className='text-[20px] md:text-[28px] font-bold text-accent'>{stat.value}</div>
                         </div>
                     ))}
                 </div>
